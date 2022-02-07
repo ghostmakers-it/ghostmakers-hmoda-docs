@@ -3,6 +3,7 @@ import { defineConfig } from "vuepress/config";
 export default defineConfig({
   title: 'Ghost Makers - HModa - Documentation',
   description: 'The documentation of the Ghost Makers HModa project',
+  base: '/ghostmakers-hmoda-docs/',
   
   head: [
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
