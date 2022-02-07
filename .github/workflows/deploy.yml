@@ -36,7 +36,7 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-        if: steps.npm-cache-dir.outputs.cache-hit != 'true'
+        if: steps.npm-cache.outputs.cache-hit != 'true'
 
       - name: Generate static build
         run: npm run build
