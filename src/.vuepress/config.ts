@@ -14,7 +14,8 @@ export default defineConfig({
   themeConfig: {
     repo: 'ghostmakers-it/ghostmakers-hmoda-docs',
     editLinks: true,
-    docsDir: '',
+    docsBranch: 'main',
+    docsDir: 'src',
     editLinkText: '',
     lastUpdated: false,
     nav: [
