@@ -33,16 +33,9 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: ${{ runner.os }}-node-
 
-      - name: Load cached node modules
-        id: cached-npm-dependencies
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: node-modules-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
-
       - name: Install dependencies
         run: npm ci
-        if: steps.cached-npm-dependencies.outputs.cache-hit != 'true'
+        if: steps.npm-cache-dir.outputs.cache-hit != 'true'
 
       - name: Generate static build
         run: npm run build
