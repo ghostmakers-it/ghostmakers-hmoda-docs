@@ -67,6 +67,7 @@ export default defineConfig({
     '@vuepress/plugin-medium-zoom': {},
     '@vuepress/pwa': {
       serviceWorker: true
-    }
+    },
+    'fulltext-search': {}
   }
 });
