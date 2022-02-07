@@ -1,4 +1,4 @@
-import { defineConfig } from "vuepress/config";
+import { defineConfig } from 'vuepress/config';
 
 export default defineConfig({
   title: 'Ghost Makers - HModa - Documentation',
@@ -63,8 +63,9 @@ export default defineConfig({
 
   plugins: {
     '@vuepress/plugin-back-to-top': {},
+    '@vuepress/active-header-links': {},
     '@vuepress/plugin-medium-zoom': {},
-    "@vuepress/pwa": {
+    '@vuepress/pwa': {
       serviceWorker: true
     }
   }
