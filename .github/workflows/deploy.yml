@@ -1,11 +1,11 @@
-name: Documentation
+name: Deploy documentation
 
 on:
   schedule:
     - cron: "* 0 * * *"
   push:
     branches:
-      - master
+      - main
 
 permissions:
   contents: read
@@ -36,11 +36,6 @@ jobs:
 
       - name: Generate static build
         run: npm run build
-
-      - name: Complete static build
-        run: |
-          touch src/.vuepress/dist/.nojekyll
-          echo "ghostmakers-hmoda.wiki" > src/.vuepress/dist/CNAME
 
       - name: Push to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
